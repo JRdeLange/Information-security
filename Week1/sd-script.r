@@ -1,0 +1,101 @@
+encrypted_text = 
+"qptqkkwlckhkmzpnkmupkcvkwzpicacgelmfwhzlzfnmfmcksh
+cmfgvnfmrzbtpgybokwilfqbgqujbppqgbrmjiumcgliilzbrg
+phqkwzhkbubwvvzlnmpmmbvigbqgvetsmlsuzxhagxkcbgrigj
+qewarvyxzbrrpexezjikcbbuigmwbbmqnwoeoipmixrzzdxawh
+gxkiuxyahkiykpbqqfascvvvpgcmmueehpsfmlkkpkcigbwkrd
+xqlehtvzvzyvqxriigirqbgtxfdbbmfmlkgzhnpleeikqvrpvl
+gultwytyuikoxeyqaxhczbaztbvojzizpizlerzkxgaphqslvb
+aigbrmnqmfjbufukptpmvwitkqygmquchffxqiawxnvzxganem
+tvjxrerxrzymfqqtgmlpqgebuxgudunlqptxofvxtmvlxnvmtt
+mfwvugxxpauxerjwbqiohbgelayanwszkmwjqaxezkivfmqmsz
+ymvmuznrotimgwalpoemlfmvlehcmmmqamixtmirbuxgudunlq
+ptxofvmfmbgpenirrwckibvvmcdryvudtxyzabrmnptriybgkr
+vwzwotvkkieiqazehfcmgagavuloayxexzkebbtmphytkmkkmn
+lyxvmgazlixofvmfmexwtflxrmpmmuebaczrlruimlnwalizym
+kcaahvojsfyvnzisvvmwwhaebvbhydbbhzymmfzrtxlfzwcknw
+iynmaydrnwkubaganitxfivfbbvssgcmczfxgaiqmwerwvgnjh
+vmftvulvwrprwmlwmkcvgipgpmkqiawpoemlzmgpikebacujxh
+kwqgclvyjkimgrigmeibmkqmnoiyuzhnxrkwodxxpabgezfzlr
+pvxzkjigbbuxmxtiiyjvemzzmlumhlivimocvgbzktwnlbrkqk
+ranpmfemqvmgazlixofvtllnvgkjavmvgksrkwttwvwhownxpm
+amxnimtravyaktigydbbhzymmfzrtxynmocebgmlnmvyvgpibv
+thqbvfemzvxkgfnvviqlceuxrocmtpvrwxnrbmfmjhvrulhcaa
+mauismfqfpeejwfcpvlxuigypwzmlkmqzcvrkiczsbnitxxnvn
+bpagpirclhaczxrzvlwcapkmvkqhlwsttucgtjxutfkkqvaqca
+ixnildwefyrrbxbjleiuejtrbvlxgrtuczgbexfcgbiawyyvlt
+kmgtpizxaczqbwikwluqgvlhvbpcmavmvymkytcaehvblytoxv
+zzalwagxquetrqevmgnvltjxutfkkatdbrkwkmmkytjhvjjigb
+ajbxiymlumexmtuqvybrwfenzbrqazxnvtxrbrkslkpxawekiy
+gwgbqazergptzmgbrzymvgxuxvzvfmjigxvoerhfiagiykzbrp
+rfmajqgfqfpsxbxhjqtkevyqtgvixrzvlmfmgtfacikckgteii
+qmgknegudxhlmamslkpxtqtxrxvkbnprkxnvbkgbuxqolavgxu
+xvnfextmehrrpxkmdvwijrxkmoexwyzdxpqtbhgelipmqbgzrj
+ecallxkdnhpajbxiyqgejrmakvvvgxuxvgcxayjrmwcyimgaah
+aqewplifmlkmqzcvrkiizxaczjtwuiqzgvnepeumlazvuijsgz
+gwitrhrbmgagtfkcttqwvglojjhmsytgowztbmylmmxqhtiaue
+zkqlrioxprrahfmonmrkcimvgaizrjnjiexgzrwyrzvmlkdqnq
+jhmejumwyzriigkqgekbnrzvzlgoatokpbhqevmgntqifmetpv
+yiucbfxzkigecbgxvcymkciftphvzmgiawxxzbacuvnwajmwyn
+vqijgimrmegsljcuqbvmyzzwgqjrepgjwlqkuxqkdmtlbgaivr
+bmczahjyljlrqgnxofvlawhehhvmtqqyrgnrvzclfbqvcguwar
+eiikqgeiaxaqvgdcgfpixvbrnqptprpabloyxauillmzfasxkx
+apifxwqewplbbuszyxtpbvxwoeiwtiaviuibkyvffmzkmwmcgh
+jhrvwytbgkczbarprfiyjizcjrepgjwlkmgasjkpnqzrjyoimw
+qbehrmjmvszvmclfzhltlmlkbmryavmmyimeybvoirpmtqgghw
+ktckcifasxksxwxukeyvatwjlttxvdbmcfivomimckbgzkiatr
+qbgfkcttqwflcykmfuifvstjqwcznupedwkcarvyxvjeyqfxhk
+mqzcvrkivljegauxhnzawcapkmvkqhlwstwodqeyzonxykzhlo
+rkeakwdcgpbtnvzucnbkizymvmcemslymgpgvbmuwnkyvpxmtc
+imczvgxnvbaamamyxpbacqaoitkqhlwsuircilmapbtnvzpyaz
+bwgkbkgjhmijkwogorgixvlttqqdeneqgfqfusubbackbwihim
+timelpgdmgrmqmlkdqlybgkmhlbbmvorwgpqgebutxnzammzla
+ejzogmzrwxnzabkxbkxgebvmvgkmhlbbmvnghoeamciqgesvlt
+pmtkiyjqociawirvuxlbnkcizxaczshvnzuogorgixvbamctal
+kyiwlwgamtxbhbwjbxnzbmfmibkkemkckvilkiotgvrwexvxnr
+igbstwwkzmvgkkokxnbvhrgctrqbehrmewmclnnxnfztllztxn
+vutrqpbettptptrlpakebborwsjxahltrpmytikpwyeggctxbb
+uxzoxmgczrvmvymksvokigbiujmvglojxbckrmlkrtifioxxiz
+xaczvgeiyqebzrgwsrotxqaxmtjkbcvgbjotifczvvetumlazv
+uijkpxtqtxrxvkbnprkeyzuimafbfrvwyrzngwrrbbmvgamyim
+isbnmmueetqvbmhkjmktmqvlgitxqjnufgxmbqsahatkwaydru
+vubmgydnkmgebhdbuxgogpxpifxexcgtqpbpibvzaclvwrzgcu
+jqfalojehpsxtwojsbcvgbvkcgupwxxxnvkbnprketuxnztvll
+kubacbrvltzyncqamlkkpvcvgnvevdxljrysxvbagagasaxplm
+urlooctxbkertzrvtjgfmwifcebwpveyzwgytyrfxvidrprvmv
+ymkgvgaizykxlbhkciigirwtkevyqvqtvwixltxsarweyrktjk
+heezzwgyqquczymluqflexdgucbjxitrvwrprommvvxpmpbtnv
+zbqavftrvmgmctaxusmtdqrehizxaczvymzzanqmqbrifvcsvp
+mmueebrppbtnvzwgaxlxnvkhlnrwixrbxqbnmiyfntkmebggww
+kcfnftrvclclnuvgjavgxuxvjzadrwvftrvuxlbgaibzoxlmex
+gogpxplhkmtxbacizxvotigaqibpcrzmfmphrlvlxpiprwsval
+yorlakimyyzskssjmvpmgtrjkpxsvvhrxvonjieeciiivimqml
+kzzfcaftkkjbapwhzlulbmfmjtvzymvmvsxhkiimctrthkiaag
+xckmsrzbjgexpovlnnwamlxvmdcgcavgjmlkiavlkjbxpjynjl
+twfntrmibzkmmzltrjramfmjtviruxrwnvpujmvmurkiziqusb
+vhrmztuczgoixeifrzvxhzfzxnivkxnvjkmsrggogpxpkexezz
+vzrproixeiftqtxrkimvgxuxvoejnrvbfezkmkupnmlkuqwrpr
+vmvymkuiflxoctostaxvgstxrwpkcvkigytllmymmklizlauis
+ameroixvdxlbhtprptxbbbmlkfvxrqzxtguiipwitfrpcgzzrt
+ogstxaqcaix"
+
+encryp <- gsub("[\r\n]", "", encrypted_text)
+
+for (i in 5:15) {
+  total_sd <- 0
+  current_position <- 0
+  vector_length <- nchar(encryp) / i
+  for (j in 1:i) {
+    frequencies <- as.vector(table(strsplit(substring(encryp, current_position, current_position + vector_length), "")))
+    #print(substring(encryp, current_position, current_position + vector_length))
+    current_position <- current_position + vector_length + 1
+    #print(table(strsplit(substring(encryp, vector_length * (j - 1), vector_length * j), "")))
+    total_sd <- total_sd + sqrt( sum(frequencies * frequencies) / 26 - sqr( sum(frequencies) / 26 ))
+    #total_sd <- total_sd + sd(frequencies)
+  }
+  #for (j in seq(from = i, to = nchar(encryp), by = i)) {
+  #  frequencies <- as.vector(table(strsplit(substring(encryp, j - i, j), "")))
+  #  total_sd <- total_sd + sd(frequencies)
+  #}
+  cat("Key", i, "sd:", total_sd, "\n")
+}
