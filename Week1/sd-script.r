@@ -124,3 +124,37 @@ for (i in 5:15) {
   #}
   cat("Key", i, "sd:", total_sd, "\n")
 }
+
+# Compare frequencies.
+vectors <- vector()
+for (character in encrypt_split) {
+  wrap_number <- (position %% 9) + 1
+  if (is.null(vectors[wrap_number]) || is.na(vectors[wrap_number])) {
+    vectors[wrap_number] <- character
+  } else {
+    vectors[wrap_number] <- paste(vectors[wrap_number], character, sep="")
+  }
+  position <- position + 1
+}
+
+# List most likely key characters
+alphabet = c('a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z')
+three <- c('e', 'o', 'g')
+distances <- c(match(three[1], alphabet) - 1, match(three[2], alphabet) - 1, match(three[3], alphabet) - 1)
+characters <- matrix(nrow = 3, ncol = 9)
+for (k in 1:9) {
+  #cat(k)
+  #print(sort(table(strsplit(vectors[k], "")), decreasing=T))
+  x <- vector()
+  for (l in 1:3) {
+    letter <- rownames(sort(table(strsplit(vectors[k], "")), decreasing=T))[l]
+    temp_distance <- match(letter, alphabet) - distances[l]
+    if (temp_distance < 1) {
+      x[l] <- alphabet[26 + temp_distance]
+    } else {
+      x[l] <- alphabet[match(letter, alphabet) - distances[l]]
+    }
+  }
+  print(x)
+}
+
