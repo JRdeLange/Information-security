@@ -164,3 +164,22 @@ for (k in 1:9) {
   print(x)
 }
 
+# Decryption:
+decrypted_string <- ""
+alphabet = c('a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z')
+keystring <- c('i', 'n', 't', 'e', 'g', 'r', 'i', 't', 'y')
+position <- 1
+for (character in encrypt_split) {
+  distance <- match(character, alphabet) - match(keystring[position], alphabet)
+  if (distance < 0) {
+    distance <- distance + 26
+  }
+  decrypted_string <- paste(decrypted_string, alphabet[distance + 1], sep="")
+  if (position < 9) {
+    position <- position + 1
+  } else {
+    position <- 1
+  }
+}
+print(decrypted_string)
+
