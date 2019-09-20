@@ -127,14 +127,20 @@ for (i in 5:15) {
 
 # Compare frequencies.
 vectors <- vector()
+position <- 0
 for (character in encrypt_split) {
   wrap_number <- (position %% 9) + 1
+  #print(wrap_number)
   if (is.null(vectors[wrap_number]) || is.na(vectors[wrap_number])) {
     vectors[wrap_number] <- character
   } else {
     vectors[wrap_number] <- paste(vectors[wrap_number], character, sep="")
   }
-  position <- position + 1
+  if (position < 9) {
+    position <- position + 1
+  } else {
+    position <- 1
+  }
 }
 
 # List most likely key characters
