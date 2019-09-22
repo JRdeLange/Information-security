@@ -95,13 +95,16 @@ for (i in 5:15) {
   # Iterate over all the characters and put them in the right vectors.
   position = 1
   for (character in encrypt_split) {
-    wrap_number <- (position %% i) + 1
-    if (is.null(vectors[wrap_number]) || is.na(vectors[wrap_number])) {
-      vectors[wrap_number] <- character
+    if (is.null(vectors[position]) || is.na(vectors[position])) {
+      vectors[position] <- character
     } else {
-      vectors[wrap_number] <- paste(vectors[wrap_number], character, sep="")
+      vectors[position] <- paste(vectors[position], character, sep="")
     }
-    position <- position + 1
+    if (position < i) {
+      position <- position + 1
+    } else {
+      position <- 1
+    }
   }
   #frequencies <- as.vector(table(strsplit(substring(encryp, current_position, current_position + vector_length), "")))
   #print(substring(encryp, current_position, current_position + vector_length))
@@ -111,13 +114,15 @@ for (i in 5:15) {
   #total_sd <- total_sd + sd(frequencies)
   
   # Calculate the sd per vector.
-  frequencies <- c()
+  #frequencies <- c()
   for (k in 1:i) {
-    frequencies[k] <- as.vector(table(strsplit(vectors, "")[k]))
+    #frequencies[k] <- as.vector(table(strsplit(vectors, "")[k]))
+    frequencies <- as.vector(table(strsplit(vectors, "")[k]))
+    total_sd <- total_sd + sqrt( sum(frequencies * frequencies) / 26 - sqr( sum(frequencies) / 26 ))
     #print(as.vector(table(strsplit(vectors, "")[k])))
   }
   #total_sd <- sqrt( sum(frequencies * frequencies) / 26 - sqr( sum(frequencies) / 26 ))
-  total_sd <- sd(frequencies)
+  #total_sd <- sd(frequencies)
   #for (j in seq(from = i, to = nchar(encryp), by = i)) {
   #  frequencies <- as.vector(table(strsplit(substring(encryp, j - i, j), "")))
   #  total_sd <- total_sd + sd(frequencies)
@@ -127,14 +132,20 @@ for (i in 5:15) {
 
 # Compare frequencies.
 vectors <- vector()
+position <- 0
 for (character in encrypt_split) {
   wrap_number <- (position %% 9) + 1
+  #print(wrap_number)
   if (is.null(vectors[wrap_number]) || is.na(vectors[wrap_number])) {
     vectors[wrap_number] <- character
   } else {
     vectors[wrap_number] <- paste(vectors[wrap_number], character, sep="")
   }
-  position <- position + 1
+  if (position < 9) {
+    position <- position + 1
+  } else {
+    position <- 1
+  }
 }
 
 # List most likely key characters
@@ -157,4 +168,23 @@ for (k in 1:9) {
   }
   print(x)
 }
+
+# Decryption:
+decrypted_string <- ""
+alphabet = c('a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z')
+keystring <- c('i', 'n', 't', 'e', 'g', 'r', 'i', 't', 'y')
+position <- 1
+for (character in encrypt_split) {
+  distance <- match(character, alphabet) - match(keystring[position], alphabet)
+  if (distance < 0) {
+    distance <- distance + 26
+  }
+  decrypted_string <- paste(decrypted_string, alphabet[distance + 1], sep="")
+  if (position < 9) {
+    position <- position + 1
+  } else {
+    position <- 1
+  }
+}
+print(decrypted_string)
 
