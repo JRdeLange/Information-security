@@ -3,7 +3,7 @@
 #include <cstdlib>
 using namespace std;
 
-void checkFlags(bool &decrypt, 
+void checkFlags(bool &decrypt,
         bool &casing, 
         int argc, 
         char **argv)
@@ -11,6 +11,8 @@ void checkFlags(bool &decrypt,
   string dFlag{"-d"};
   string oFlag{"-o"};
 
+  // We check the arguments on the commandl ine for the flags 
+  // defined above
   for (int iter = 0; iter < argc; ++iter)
   {
     if(!dFlag.compare(argv[iter]))
@@ -21,12 +23,14 @@ void checkFlags(bool &decrypt,
   }
 }
 
-void getKey(string &key, 
+//this function reads the key from the command line
+void getKey(string &key,   
       string &refrence, 
       int argc, 
       char **argv, 
       bool decrypt)
 {
+  // If we get an int as key we create a character map from this.
   if (key.length() < 26)
   {
     int shift = atoi(argv[argc-1])%26;
@@ -41,6 +45,7 @@ void getKey(string &key,
     }
   }
 
+  //If the decrypt flag was used we swap the key and refrence.
   if (decrypt)
   {
     refrence = key;
@@ -56,14 +61,18 @@ string encode(string key,
   string line;
   string newLine;
 
+// This loop reads line for line the input
   while(true)
   {
     getline(cin, line);
     newLine = {};
 
+    // For each line it checks the characters against the refrence
+    // We then replace it with the character in the key.
     for (int iter = 0; iter < int(line.length()); ++iter)
       for (int counter = 0; counter < 26; ++counter)
-          
+        // If the casing flag was used we use the same casing as the 
+        // input  
         if (casing)
         {
           if (line[iter] < 65 or 
@@ -84,6 +93,7 @@ string encode(string key,
 
     codedMessage += newLine;
 
+    // If we reach the end of the file we break from the while loop
     if (cin.eof())
       break;
 
@@ -95,6 +105,9 @@ string encode(string key,
 
 int main(int argc, char *argv[])
 {
+  // If we receive no extra arguments we print the usage 
+  // instructions
+
   if (argc > 1)
   {
     bool decrypt = false;
