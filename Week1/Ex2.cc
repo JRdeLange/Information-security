@@ -4,9 +4,9 @@
 using namespace std;
 
 void checkFlags(bool &decrypt, 
-				bool &casing, 
-				int argc, 
-				char **argv)
+        bool &casing, 
+        int argc, 
+        char **argv)
 {
   string dFlag{"-d"};
   string oFlag{"-o"};
@@ -22,10 +22,10 @@ void checkFlags(bool &decrypt,
 }
 
 void getKey(string &key, 
-			string &refrence, 
-			int argc, 
-			char **argv, 
-			bool decrypt)
+      string &refrence, 
+      int argc, 
+      char **argv, 
+      bool decrypt)
 {
   if (key.length() < 26)
   {
@@ -49,8 +49,8 @@ void getKey(string &key,
 }
 
 string encode(string key, 
-              string refrence, 
-              bool casing)
+        string refrence, 
+        bool casing)
 {
   string codedMessage;
   string line;
@@ -66,7 +66,9 @@ string encode(string key,
           
         if (casing)
         {
-          if (line[iter] < 65 or (line[iter] > 90 and line[iter] < 97) or line[iter] > 122)
+          if (line[iter] < 65 or 
+              (line[iter] > 90 and line[iter] < 97) or 
+              line[iter] > 122)
           {
             newLine += line[iter];
             break;
@@ -76,7 +78,8 @@ string encode(string key,
           else if (line[iter] == refrence[counter] - 32)
             newLine += key[counter] - 32;
         }
-        else if (line[iter] == refrence[counter] or line[iter] == refrence[counter] - 32)
+        else if (line[iter] == refrence[counter] or 
+            	line[iter] == refrence[counter] - 32)
             newLine += key[counter];
 
     codedMessage += newLine;
@@ -123,75 +126,3 @@ int main(int argc, char *argv[])
       "to do a letter shift (% 26, 0: a = a)Shift 3 is\n"
       "the classical Caesar encryption \n";
 }
-
-/*
-
-command = input()
-
-array = 'abcdefghijklmnopqrstuvwxyz'
-
-key = command[len(command)-1]
-
-if ord(key) > 47 and ord(key) < 58:
-  key = int(key)
-  array = array[-key:]+array[:-key]
-  key = ['abcdefghijklmnopqrstuvwxyz', array]
-  remainingLength = len(command)
-  print(key)
-else:
-  key = ['abcdefghijklmnopqrstuvwxyz', command[len(command)-26:len(command)]]
-  remainingLength = len(command)-25
-
-print(key)
-
-nonLetters = 'discard'
-mode = 'e'
-
-if command[remainingLength-4] == "-":
-
-  if command[remainingLength-3] == 'd':
-    mode = 'd'
-    if command[remainingLength-7] == "-" and command[remainingLength-6] == 'o':
-      nonLetters = 'keep'
-      text = command[0:remainingLength-8]
-    else:
-      text = command[0:remainingLength-5]
-
-  elif command[remainingLength-3] == 'o':
-    nonLetters = 'keep'
-    text = command[0:len(command)-5]
-  else:
-    text = command[0:len(command)-2]
-
-else:
-  text = command[0:len(command)-2]
-
-if mode == "d":
-  temp = key[0]
-  key[0] = key[1]
-  key[1] = temp
-
-encodedText = ""
-
-for symbol in text:
-
-  if symbol.isalpha():
-
-    if symbol.isupper():
-      newSymbol = chr(ord(symbol) + 32)
-      newSymbol = key[1][key[0].find(newSymbol)]
-      if nonLetters == "keep":
-        newSymbol = chr(ord(newSymbol) - 32)
-
-    if symbol.islower():
-      newSymbol = key[1][key[0].find(symbol)]
-
-    encodedText += newSymbol
-
-  elif nonLetters == "keep":
-    encodedText += symbol
-
-
-print('Result:\n' + encodedText)
-
-*/
