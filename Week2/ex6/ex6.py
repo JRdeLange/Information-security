@@ -28,6 +28,34 @@ for x in range(1, n) :
 line = sys.stdin.readline()
 line = line.split()
 
-test = '3'
-test << 2
-print (bytearray(test, encoding="utf8"))
+numbers = []
+for x in range(0,len(line)):
+	numbers.append(int(line[x]))
+
+for x in numbers:
+	print (bin(x))
+
+
+
+
+'''
+frame = bytearray()
+for x in line:
+	frame.append(int(x))
+
+print (bin(frame[1] & 0b11000000))
+
+q = 0b00110101
+print (q >> 9 & 0b1)
+
+print(bin(q))
+
+
+
+test = 0b001000
+print (bin(test))
+print (test)
+test = test << 8
+print (bin(test))
+print (test)
+'''
