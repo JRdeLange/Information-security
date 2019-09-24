@@ -75,8 +75,7 @@ for element in range(len(message)):
 
 # We encode for 16 rounds. Generating a key according to the
 # keyschedule and encoding using the feistel function.
-round = 16
-for round in range(rounds):
+for round in range(16):
 	key = keySchedule(keyString, round)
 	message = feistel(key, message)
 
@@ -84,4 +83,6 @@ for round in range(rounds):
 for element in range(len(message)):
 	message[element] = chr(message[element])
 
-print(''.join(message))
+file = open("output.txt", "w")
+
+file.write(''.join(message))
