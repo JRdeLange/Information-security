@@ -73,8 +73,6 @@ message = readFile()
 for element in range(len(message)):
 	message[element] = ord(message[element])
 
-print(message)
-
 # We pad the input so that it is divisible by 8. If it is
 # already divisible by 8 we pad by 8.
 if (len(message) % 8) == 0:
@@ -84,8 +82,6 @@ else:
 
 for x in range(padding):
 	message.append(0)
-
-print(message)
 
 # We encode for 16 rounds. Generating a key according to the
 # keyschedule and encoding using the feistel function.
@@ -97,6 +93,10 @@ for round in range(16):
 for element in range(len(message)):
 	message[element] = chr(message[element])
 
+message = ''.join(message)
+
+print(sha256(message))
+
 file = open("output.txt", "w")
 
-file.write(''.join(message))
+file.write(message)
