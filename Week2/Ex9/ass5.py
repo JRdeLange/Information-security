@@ -75,7 +75,8 @@ for element in range(len(message)):
 
 # We encode for 16 rounds. Generating a key according to the
 # keyschedule and encoding using the feistel function.
-for round in range(16):
+round = 16
+for round in range(rounds):
 	key = keySchedule(keyString, round)
 	message = feistel(key, message)
 
