@@ -59,6 +59,5 @@ decyphered = ""
 for x in decrypted:
 	decyphered = decyphered + chr(x >> 8)
 	decyphered = decyphered + chr(x & 255)
-	
-	
+
 print (decyphered)
