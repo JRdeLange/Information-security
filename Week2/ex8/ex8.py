@@ -20,9 +20,9 @@ for x in range(0, len(text)):
 	encrypt.append(text[x] ^ key1[x])
 	decrypt.append(encrypt[x] ^ key2[x])
 
+decryptstring = ""
 for x in range(0, len(text)):
-	encrypt[x] = (encrypt[x])
-	decrypt[x] = decrypt[x] ^ key2[x]
+	decryptstring = decryptstring + chr(decrypt[x])
 
 print (encrypt)
-print (decrypt)
+print (decryptstring)

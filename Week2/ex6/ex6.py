@@ -10,7 +10,6 @@ for x in knapsack:
 #choose n and m
 n = total + 1075 # = 203471
 m = 64
-print ("n = " + str(n) + ", m = " + str(m))
 
 #get public key
 public = list()
