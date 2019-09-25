@@ -40,7 +40,7 @@ def keySchedule(keyString, round):
 # This function will read and save all of the lines entered
 # after being called until EOF has been reached. It then 
 # returns this as one long string.
-def readFile():
+def readInput():
 	message = []
 
 	while True:
@@ -67,7 +67,7 @@ keyString = sha256(password)
 keyString += sha256(keyString)
 
 # We read the input
-message = readFile()
+message = readInput()
 
 # We change the input characters to ints for the next step.
 for element in range(len(message)):
