@@ -58,6 +58,10 @@ def sha256(string):
 	return shaSignature
 
 # MAIN
+# We read the input
+message = readInput()
+
+# We request the password
 password = input("password(s): ")
 
 # We generate our key schedule by taking the SHA256 hash
@@ -66,9 +70,6 @@ password = input("password(s): ")
 keyString = sha256(password)
 print(keyString)
 keyString += sha256(keyString)
-
-# We read the input
-message = readInput()
 
 # We change the input characters to ints for the next step.
 for element in range(len(message)):
@@ -100,6 +101,6 @@ message = ''.join(message)
 
 print(sha256(message))
 
-file = open("output.txt", "w")
+file = open("nsa.spy.output.txt", "w")
 
 file.write(message)
