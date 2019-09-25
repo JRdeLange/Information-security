@@ -15,14 +15,18 @@ for x in range(0, len(text)):
 
 encrypt = []
 decrypt = []
-
 for x in range(0, len(text)):
+	#encrypt the text
 	encrypt.append(text[x] ^ key1[x])
+	#and decrypt it with key2 to obtain the alternative text
 	decrypt.append(encrypt[x] ^ key2[x])
 
+#since the alternative text consists of characters we
+#transform it to string for printing
 decryptstring = ""
 for x in range(0, len(text)):
 	decryptstring = decryptstring + chr(decrypt[x])
 
+#give the output
 print (encrypt)
 print (decryptstring)
