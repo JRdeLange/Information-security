@@ -1,3 +1,5 @@
+import sys
+
 # Initialisation
 def initialise(key):
     # Convert the key
@@ -19,18 +21,20 @@ def keyStreamByte(i, j, s):
     j = (j + s[i]) % 256
     s[i], s[j] = s[j], s[i] # swap
     t = (s[i] + s[j]) % 256
-    return s[t]
+    return i, j, s[t]
     
 if __name__ == '__main__':
-    text = "test"
+    text = sys.stdin.buffer.read(None)
     key = "2019"
     stream = initialise(key)
     i = j = 0
     # Ignore first 256 bytes
     for x in range(256):
-        keyStreamByte(i, j, stream)
+        i, j, temp = keyStreamByte(i, j, stream)
         
     # Encryption or decryption, depending on whether the text is plaintext or cipher text.
+    final_text = ""
     for x in range(0, len(text)):
-        streamByte = keyStreamByte(i, j, stream)
-        print(ord(text[i]) ^ streamByte) # xor and print
+        i, j, streamByte = keyStreamByte(i, j, stream)
+        final_text += chr(text[x] ^ streamByte) # xor
+    print(final_text)
