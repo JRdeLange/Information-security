@@ -36,5 +36,10 @@ if __name__ == '__main__':
     final_text = ""
     for x in range(0, len(text)):
         i, j, streamByte = keyStreamByte(i, j, stream)
-        final_text += chr(text[x] ^ streamByte) # xor
+        # Note: although this program can be used to both encrypt and decrypt
+        # RC4, it should be noted that when encrypting the output will not be
+        # binary (but unicode instead). This is because of the chr() function 
+        # which is implemented to make decrypted text human-readable.
+        # This does not affect encryption/decryption in any way.
+        final_text += chr(text[x] ^ streamByte) # xor and convert to unicode.
     print(final_text)
