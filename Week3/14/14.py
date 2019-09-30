@@ -45,3 +45,15 @@ for i in range(0,pwrOfTwo+1):
 	X1, Y1 = doublePoint(X1, Y1, a, N)
 
 print (Xm, Ym)
+
+Xn = 114
+Yn = 6
+
+finalX = 0
+finalY = 0
+for i in range(0,pwrOfTwo+1):
+	if (m>>i & 1) == 1:
+		finalX, finalY = addPoint(finalX, finalY, Xn, Yn, N)
+	Xn, Yn = doublePoint(Xn, Yn, a, N)
+
+print (finalX, finalY)
