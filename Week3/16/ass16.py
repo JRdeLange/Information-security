@@ -8,30 +8,29 @@ import hashlib
 # becomes the right part of the next itteration.
 def feistel(key, message):
 	encodedMessage = []
-	for part in range(int(len(message)/8)):
-		toEncode = message[part*8:(part+1)*8]
+	for part in range(int(len(message)/16)):
+		toEncode = message[part*16:(part+1)*16]
 
-		left = toEncode[0:4]
-		right = toEncode[4:8]
+		left = toEncode[0:8]
+		right = toEncode[8:16]
 
 		newLeft = right
 		newRight = []
 
-		for enum in range(4):
-			newRight.append(left[enum] ^ key[enum])
+		for enum in range(8):
+			newRight.append(left[enum] ^ key[enum] ^ right[enum])
 
 		encodedMessage.extend(newLeft + newRight)
-
 	return encodedMessage
 
 # The key schedule reads eight characters from the keystring
 # each round and turns these into 4 ints, interpreting them
 # as hexadecimal values.
 def keySchedule(keyString, round):
-	preKey = keyString[round*8:(round+1)*8]
+	preKey = keyString[round*16:(round+1)*16]
 	key = []
 
-	for enum in range(4):
+	for enum in range(8):
 		key.append(preKey[enum*2]+preKey[enum*2+1])
 		key[enum] = int(key[enum],16)
 
@@ -58,35 +57,31 @@ def sha256(string):
 	return shaSignature
 
 # MAIN
-# We request the password
-password = input("password(s): ")
+password = input("Shared ECC point: ")
 
 # We generate our key schedule by taking the SHA256 hash
-# of the password(s) and appending the SHA256 hash of this
-# SHA256 hash to it.
+# of the point
 keyString = sha256(password)
-keyString += sha256(keyString)
 
 # We read the input
 message = readInput()
 
-# We change the input characters to ints for the next step.
+# We change the input characters to ints so we can use the ^ opperator.
 for element in range(len(message)):
 	message[element] = ord(message[element])
 
-# We pad the input so that it is divisible by 8. If it is
-# already divisible by 8 we pad by 8.
-if (len(message) % 8) == 0:
-	padding = 8
+# Pad the message
+if (len(message) % 16) == 0:
+	padding = 16;
 else:
-	padding = 8 - (len(message) % 8)
+	padding = 16 - (len(message) % 16)
 
 for x in range(padding):
-	message.append(0)
+	message.append(padding)
 
-# We encode for 16 rounds. Generating a key according to the
+# We encode for 4 rounds. Generating a key according to the
 # keyschedule and encoding using the feistel function.
-for round in range(16):
+for round in range(4):
 	key = keySchedule(keyString, round)
 	message = feistel(key, message)
 
@@ -94,12 +89,4 @@ for round in range(16):
 for element in range(len(message)):
 	message[element] = chr(message[element])
 
-# We print the output's SHA256 hash and put it in a text file
-# (doesn't work on windows, does work on linux)
-message = ''.join(message)
-
-print(sha256(message))
-
-file = open("nsa.spy.output.txt", "w")
-
-file.write(message)
+print(''.join(message))
