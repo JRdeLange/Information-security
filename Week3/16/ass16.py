@@ -1,11 +1,13 @@
 import sys
 import hashlib
+import base64
 
 # The feistel function performs the encoding for a single
-# round. For each set of 8 bytes we divide it into a left
+# round. For each set of 16 bytes we divide it into a left
 # and right part. The right part becomes the left part of
-# the next itteration, and the left part XOR the key 
-# becomes the right part of the next itteration.
+# the next itteration, and the left part XOR the key and 
+# the right part, becomes the right part of the next 
+# itteration.
 def feistel(key, message):
 	encodedMessage = []
 	for part in range(int(len(message)/16)):
@@ -36,17 +38,16 @@ def keySchedule(keyString, round):
 
 	return key
 
-# This function will read and save all of the lines entered
-# after being called until EOF has been reached. It then 
-# returns this as one long string.
+# This function will read the input via stdin, as bytes
+# converting and returning the bytes as a list of ints.
 def readInput():
-	message = []
+	# We read the bitestream from stdin
+	message = sys.stdin.buffer.read()
 
-	while True:
-		line = sys.stdin.readline()
-		if line == '':
-			break
-		message += line
+	# We turn the bytestring into an array of ints
+	# removing the initialization vector which are 
+	# the first 16 bytes
+	message = list(message)[16:]
 
 	return message
 
@@ -57,7 +58,7 @@ def sha256(string):
 	return shaSignature
 
 # MAIN
-password = input("Shared ECC point: ")
+password = "(34,185)"
 
 # We generate our key schedule by taking the SHA256 hash
 # of the point
@@ -66,11 +67,7 @@ keyString = sha256(password)
 # We read the input
 message = readInput()
 
-# We change the input characters to ints so we can use the ^ opperator.
-for element in range(len(message)):
-	message[element] = ord(message[element])
-
-# Pad the message
+# We pad the message
 if (len(message) % 16) == 0:
 	padding = 16;
 else:
@@ -85,8 +82,10 @@ for round in range(4):
 	key = keySchedule(keyString, round)
 	message = feistel(key, message)
 
-# We change the message back into character for our output.
-for element in range(len(message)):
-	message[element] = chr(message[element])
+# We change the output back into bytes
+message = bytearray(message)
 
-print(''.join(message))
+print(message)
+
+# We write the output to std:out
+#sys.stdout.buffer.write(message)
